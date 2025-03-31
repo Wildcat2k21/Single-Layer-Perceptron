@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Однослойный перцептрон</title>
+    <script type="module" src="./src/index.js"></script>
+    <link href="./src/styles/index.css" rel="stylesheet"/>
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1>Однослойный Перцептрон</h1>
+    </header>
+    <section class="learning-options">
+      <h2>Параметры обучения</h2>
+      <h4 class="h4-title h4-title--accent-lost">После того, как нажмете на "Предсказать", обновите страницу чтобы заново переучить нейросеть</h4>
+      <!-- Параметры обучения -->
+      <div class="neuron-options">
+        <label for="learningRate">
+          <input 
+            type="range" 
+            id="learningRate"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.1"
+          />
+          Скорость обучения: <span id="learningRateValue">0.1</span>
+        </label>
+        <label for="epochs">
+          <input
+            type="range"
+            id="epochs"
+            min="1"
+            max="100000"
+            step="1"
+            value="10000"
+          />
+          Количество эпох: <span id="epochsValue">010000</span>
+        </label>
+      </div>
+    </section>
+    <main class="content">
+      <section class="input-data">
+        <h2>Входные данные</h2>
+        <!-- Входные данные -->
+        <div class="neuron-data">
+          <label class="label label--cursor-pointer">
+            <input type="checkbox" class="input input--cursor-pointer" id="condition1" checked> Была хорошая оценка за прошлую пару ?
+          </label>
+          <label class="label label--cursor-pointer">
+            <input type="checkbox" class="input input--cursor-pointer" id="condition2" checked> Будет ли отмечать препод ?
+          </label>
+          <label class="label label--cursor-pointer">
+            <input type="checkbox" class="input input--cursor-pointer" id="condition3" checked> Будет ли в конце семестра экзамен ?
+          </label>
+            <br/>
+          <button class="learning-options__button" id="trainButton">Предсказать</button>
+          <div class="neuron-data__prediction">
+            <span id="prediction">Неизвестно</span>
+          </div>
+        </div>
+      </section>
+      <section class="charts">
+        <h2>График точности %</h2>
+        <!-- Канвас для Chart.js (график точности) -->
+      </section>
+      <section class="p5-sketch">
+        <h2>Схема Перцептрона</h2>
+        <h4 class="h4-title h4-title--accent-lost">Схема активации нейрона - сигмойда</h4>
+        <div class="p5-sketch__container" id="perceptron-container">
+          <!-- Канвас для p5.js (Схема Перцептрона) -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>

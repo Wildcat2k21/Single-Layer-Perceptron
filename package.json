@@ -1,0 +1,23 @@
+{
+  "name": "neuro-demo",
+  "version": "1.0.0",
+  "description": "Сгенерированное изображение рукописного текста (как при фотографии листа с текстом) передается на обработку в 3D-сцену на WebGL в качестве текстуры, имитируя различные эффекты фона, наклона, поворота, масштаба (как при фото-снимке на телефон).",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.4.8",
+    "mathjs": "^14.4.0",
+    "p5": "^1.11.3",
+    "vite-plugin-static-copy": "^2.3.0"
+  },
+  "devDependencies": {
+    "vite": "^6.2.3"
+  }
+}
