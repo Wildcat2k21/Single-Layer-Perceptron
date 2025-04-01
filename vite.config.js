@@ -1,9 +1,12 @@
 import { defineConfig } from "vite";
+import eslintPlugin from "vite-plugin-eslint";
 
 export default defineConfig({
-    // Здесь можно указать дополнительные параметры конфигурации Vite
-    root: "./", // Путь к корневой папке вашего проекта
+    plugins: [eslintPlugin()],
+    server: {
+        port: 3000, // Настраиваем порт сервера
+    },
     build: {
-        outDir: "build" // Папка для выходных файлов
-    }
+        outDir: "dist", // Куда собирать файлы
+    },
 });
